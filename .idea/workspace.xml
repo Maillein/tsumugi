@@ -84,7 +84,7 @@
       <workItem from="1565338156827" duration="86000" />
       <workItem from="1565338273340" duration="659000" />
       <workItem from="1565340280711" duration="304000" />
-      <workItem from="1565623605225" duration="7870000" />
+      <workItem from="1565623605225" duration="10741000" />
     </task>
     <task id="LOCAL-00001" summary="初めてのコミット">
       <created>1564756422856</created>
@@ -121,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565626211447</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Todoを並べて表示できるようになった">
+      <created>1565686937135</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1565686937135</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +151,7 @@
     <MESSAGE value="初めてのコミット" />
     <MESSAGE value="雛形を作った" />
     <MESSAGE value="Todoリストの最初のコミット" />
-    <option name="LAST_COMMIT_MESSAGE" value="Todoリストの最初のコミット" />
+    <MESSAGE value="Todoを並べて表示できるようになった" />
+    <option name="LAST_COMMIT_MESSAGE" value="Todoを並べて表示できるようになった" />
   </component>
 </project>

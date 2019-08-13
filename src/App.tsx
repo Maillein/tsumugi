@@ -5,6 +5,7 @@ interface TodoProps {
     id: number,
     title: string,
     content: string,
+    onClick: (id: number) => void
 }
 
 class Todo extends React.Component<TodoProps, TodoProps> {
@@ -12,12 +13,17 @@ class Todo extends React.Component<TodoProps, TodoProps> {
         super(props);
         this.state = props;
     }
+
+    onClick = (id: number) => {
+        this.props.onClick(id);
+    };
+
     render(): React.ReactElement {
         return (
             <div className={"Todo"}>
                 <h1>{this.state.title}</h1>
                 <p>{this.state.content}</p>
-                <button>done</button>
+                <button onClick={() => {this.onClick(this.props.id);}}>done</button>
             </div>
         );
     }
@@ -37,10 +43,11 @@ class TodoList extends React.Component<{},Map<number, TodoListState>> {
         this.state.set(2, {title: "飯", content: "飯を食う", done: false});
     }
 
-    handleClick = () => {
-        this.setState(
-            {}
-        )
+    handleClick = (id: number) => {
+        // @ts-ignore
+        alert(this.state.get(id).done);
+        // @ts-ignore
+        this.state.get(id).done = true;
     };
 
     render(): React.ReactElement {
@@ -48,7 +55,11 @@ class TodoList extends React.Component<{},Map<number, TodoListState>> {
         this.state.forEach(
             (value: TodoListState, key: number) => {
                 if (!value.done) {
-                    listItems.push(<li key={key}><Todo id={key} title={value.title} content={value.content}/></li>);
+                    listItems.push(
+                        <li key={key}>
+                            <Todo id={key} title={value.title} content={value.content} onClick={this.handleClick}/>
+                        </li>
+                    );
                 }
             }
         );
