@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="090eeca0-0e7a-489d-8340-d3b5ce577d11" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
     </list>
@@ -85,7 +84,7 @@
       <workItem from="1565338156827" duration="86000" />
       <workItem from="1565338273340" duration="659000" />
       <workItem from="1565340280711" duration="304000" />
-      <workItem from="1565623605225" duration="1077000" />
+      <workItem from="1565623605225" duration="7870000" />
     </task>
     <task id="LOCAL-00001" summary="初めてのコミット">
       <created>1564756422856</created>
@@ -108,7 +107,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564756976283</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Todoリストの最初のコミット">
+      <created>1565626178266</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1565626178266</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Todoリストの最初のコミット">
+      <created>1565626211447</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1565626211447</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +143,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初めてのコミット" />
     <MESSAGE value="雛形を作った" />
-    <option name="LAST_COMMIT_MESSAGE" value="雛形を作った" />
+    <MESSAGE value="Todoリストの最初のコミット" />
+    <option name="LAST_COMMIT_MESSAGE" value="Todoリストの最初のコミット" />
   </component>
 </project>
