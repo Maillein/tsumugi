@@ -44,10 +44,13 @@ class TodoList extends React.Component<{},Map<number, TodoListState>> {
     }
 
     handleClick = (id: number) => {
-        // @ts-ignore
-        alert(this.state.get(id).done);
-        // @ts-ignore
-        this.state.get(id).done = true;
+        this.setState(
+            (prevState) => {
+                // @ts-ignore
+                prevState.get(id).done = true;
+            }
+        );
+        this.forceUpdate();
     };
 
     render(): React.ReactElement {

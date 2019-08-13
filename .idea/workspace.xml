@@ -40,7 +40,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RunDashboard">
@@ -84,7 +84,7 @@
       <workItem from="1565338156827" duration="86000" />
       <workItem from="1565338273340" duration="659000" />
       <workItem from="1565340280711" duration="304000" />
-      <workItem from="1565623605225" duration="10741000" />
+      <workItem from="1565623605225" duration="12058000" />
     </task>
     <task id="LOCAL-00001" summary="初めてのコミット">
       <created>1564756422856</created>
@@ -128,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565686937135</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Todoリストのstateの書き換えはできるようになったが画面に反映されない">
+      <created>1565691943628</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1565691943628</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +159,7 @@
     <MESSAGE value="雛形を作った" />
     <MESSAGE value="Todoリストの最初のコミット" />
     <MESSAGE value="Todoを並べて表示できるようになった" />
-    <option name="LAST_COMMIT_MESSAGE" value="Todoを並べて表示できるようになった" />
+    <MESSAGE value="Todoリストのstateの書き換えはできるようになったが画面に反映されない" />
+    <option name="LAST_COMMIT_MESSAGE" value="Todoリストのstateの書き換えはできるようになったが画面に反映されない" />
   </component>
 </project>
