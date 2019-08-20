@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="090eeca0-0e7a-489d-8340-d3b5ce577d11" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,6 +45,11 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -84,7 +92,9 @@
       <workItem from="1565338156827" duration="86000" />
       <workItem from="1565338273340" duration="659000" />
       <workItem from="1565340280711" duration="304000" />
-      <workItem from="1565623605225" duration="12058000" />
+      <workItem from="1565623605225" duration="15398000" />
+      <workItem from="1565894270974" duration="125000" />
+      <workItem from="1566202911413" duration="4682000" />
     </task>
     <task id="LOCAL-00001" summary="初めてのコミット">
       <created>1564756422856</created>
@@ -135,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565691943628</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Todoリストのstateの書き換えが画面に反映されるようになった。forceUpdateを使っているのが駄目。">
+      <created>1565693954931</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1565693954931</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +177,7 @@
     <MESSAGE value="Todoリストの最初のコミット" />
     <MESSAGE value="Todoを並べて表示できるようになった" />
     <MESSAGE value="Todoリストのstateの書き換えはできるようになったが画面に反映されない" />
-    <option name="LAST_COMMIT_MESSAGE" value="Todoリストのstateの書き換えはできるようになったが画面に反映されない" />
+    <MESSAGE value="Todoリストのstateの書き換えが画面に反映されるようになった。forceUpdateを使っているのが駄目。" />
+    <option name="LAST_COMMIT_MESSAGE" value="Todoリストのstateの書き換えが画面に反映されるようになった。forceUpdateを使っているのが駄目。" />
   </component>
 </project>
