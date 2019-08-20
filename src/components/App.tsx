@@ -1,122 +1,84 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-interface TodoProps {
+interface Todo {
     title: string,
-    content: string,
-    onClick: (title: string) => void
+    contents: string
 }
 
-const Todo: React.FC<TodoProps> = (props: TodoProps) => {
-    return (
-        <div className={"Todo"}>
-            <h1>{props.title}</h1>
-            <p>{props.content}</p>
-            <button onClick={() => {props.onClick(props.title);}}>done</button>
-        </div>
-    )
-};
-
-interface NewTodoProps {
-    onClick: (newTodo: TodoListState) => void
+interface AppProps {
+    todo: Todo[],
+    newTodo: Todo
 }
 
-class NewTodo extends React.Component<NewTodoProps, TodoListState> {
-    state: TodoListState;
-
-    constructor(props: NewTodoProps) {
-        super(props);
-        this.state = {title: "", content: "", done: false};
-    }
-
-    handleChangeTitle = (event: any) => {
-        this.setState({title: event.target.value});
-    };
-
-    handleChangeContent = (event: any) => {
-        this.setState({content: event.target.value});
-    };
-
-    render(): React.ReactElement {
-        return (
-            <form>
-                <label>
-                    Title:
-                    <input type={"text"} value={this.state.title} onChange={this.handleChangeTitle}/>
-                </label>
-                <br/>
-                <label>
-                    Contents:
-                    <input type={"text"} value={this.state.content} onChange={this.handleChangeContent}/>
-                </label>
-                <br/>
-                <button onClick={() => {this.props.onClick(this.state);}}>done</button>
-            </form>
-        )
-    }
-}
-
-interface TodoListState {
-    title: string,
-    content: string,
-    done: boolean
-}
-
-class TodoList extends React.Component<{},Map<string, TodoListState>> {
+class App extends Component<{}, AppProps> {
     constructor(props: any) {
         super(props);
-        this.state = new Map<string, TodoListState>();
-        this.state.set("react", {title: "react", content: "reactでtodoリストを作る", done: false});
-        this.state.set("飯", {title: "飯", content: "飯を食う", done: false});
+        this.state = {
+            todo: [],
+            newTodo: {title: "", contents: ""}
+        };
     }
 
-    // "add"ボタンが押された時
-    addClick = (newTodo: TodoListState) => {
-        this.state.set(newTodo.title, {title: newTodo.title, content: newTodo.content, done: false});
-        // this.setState(
-        //     (state) => {
-        //         state.set(newTodo.title, {title: newTodo.title, content: newTodo.content, done: false});
-        //     }
-        // );
+    onTitleChange = (event: any) => {
+        let newTodo = this.state.newTodo;
+        newTodo.title = event.target.value;
+        this.setState({
+            newTodo: newTodo
+        });
     };
 
-    // "done"ボタンが押された時
-    doneClick = (title: string) => {
-        this.setState(
-            (prevState) => {
-                prevState.get(title)!.done = true;
-            }
-        );
-        this.forceUpdate();
+    onContentsChange = (event: any) => {
+        let newTodo = this.state.newTodo;
+        newTodo.contents = event.target.value;
+        this.setState({
+            newTodo: newTodo
+        });
     };
 
-    render(): React.ReactElement {
-        let listItems:React.ReactElement[] = [];
-        this.state.forEach(
-            (value: TodoListState, key: string) => {
-                if (!value.done) {
-                    listItems.push(
-                        <li key={key}>
-                            <Todo title={value.title} content={value.content} onClick={this.doneClick}/>
-                        </li>
-                    );
-                }
-            }
-        );
+    addTodo = () => {
+        const todo = this.state.todo;
+        const newTodo = Object.assign({}, this.state.newTodo);
+        this.setState({
+            todo: [...todo, newTodo]
+        })
+    };
+
+    removeTodo = (index: any) => {
+        const {todo} = this.state;
+        this.setState({
+            todo: [...todo.slice(0, index), ...todo.slice(index + 1)]
+        });
+    };
+
+    render() {
+        const {todo} = this.state;
+
         return (
-            <div className={"TodoList"}>
-                <NewTodo onClick={this.addClick}/>
-                <ul>{listItems}</ul>
+            <div>
+                <div>
+                    <label>
+                        Title : <input type={"text"} value={this.state.newTodo.title} onChange={this.onTitleChange}/>
+                    </label>
+                    <br/>
+                    <label>
+                        Contents : <input type={"text"} value={this.state.newTodo.contents} onChange={this.onContentsChange}/>
+                    </label>
+                    <button onClick={this.addTodo}>Add</button>
+                </div>
+                <ul>
+                    {todo.map((todo, index) =>
+                        <li key={index}>
+                            <h1>
+                                {todo.title}
+                            </h1>
+                            {todo.contents}
+                            <button onClick={() => {this.removeTodo(index)}}>Remove</button>
+                        </li>)
+                    }
+                </ul>
             </div>
-        )
+        );
     }
 }
-
-const App: React.FC = () => {
-    return (
-        <div>
-            <TodoList/>
-        </div>
-    );
-};
 
 export default App;
